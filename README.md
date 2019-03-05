@@ -23,6 +23,9 @@ Contents
 --------
 
 * **public_html**: mirror of the directory structure on DreamHost's server
+  * **custom.css**: CSS overrides on a per-section basis, primarily to have
+                    multiple related elements (semesters, financial aid
+		    entries) on one line
   * **index.html**: Contains the "embed link" from FormSmarts
   * **syronex.html**: HTML file named by FormSmarts to do domain-name
                       verification, a la SSL/TLS cert "Domain Validation"

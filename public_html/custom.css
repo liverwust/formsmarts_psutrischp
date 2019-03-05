@@ -1,0 +1,10 @@
+/* Heavy influence from https://formsmarts.com/weblog/form-builder/online-form-customize-style-css */
+
+/* Section: "Semester of Initiation" */
+#section_2 h2 { display: none }
+/* Label for the year picker */
+#section_2 label:last-of-type { display:none }
+#section_2 select, #section_2 input { width: 200px }
+
+/* Section: "Not Yet Initiated" */
+#section_3 h2 { display:none }
