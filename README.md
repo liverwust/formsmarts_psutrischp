@@ -23,5 +23,6 @@ Contents
 --------
 
 * **public_html**: mirror of the directory structure on DreamHost's server
+  * **index.html**: Contains the "embed link" from FormSmarts
   * **syronex.html**: HTML file named by FormSmarts to do domain-name
                       verification, a la SSL/TLS cert "Domain Validation"
