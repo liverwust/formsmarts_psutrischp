@@ -79,5 +79,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-# Generated CSS output file
-public_html/custom.css
+# Generated CSS output files
+public_html/*.css

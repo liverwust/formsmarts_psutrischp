@@ -26,11 +26,14 @@ Contents
   * **custom.css**: CSS overrides on a per-section basis, primarily to have
                     multiple related elements (semesters, financial aid
 		    entries) on one line -- generated from custom.less
+  * **embed_page.css**: CSS styles for the embed page itself, primarily for
+                        coloration and layout -- generated from embed_page.less
   * **index.html**: Contains the "embed link" from FormSmarts
   * **syronex.html**: HTML file named by FormSmarts to do domain-name
                       verification, a la SSL/TLS cert "Domain Validation"
 * **custom.less**: Preprocessed CSS overrides using [Less][2] which generates
                    the **custom.css** file
+* **embed_page.less**: Preprocessed page layout styles
 * **Makefile**: Run *make* to generate **custom.css** (see Instructions below)
 * **package.json**: [Node.JS][3] config file containing the Less dependency
 * **package-lock.json**: [Node.JS][3] boilerplate config file
