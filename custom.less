@@ -1,20 +1,17 @@
 /* Heavy influence from https://formsmarts.com/weblog/form-builder/online-form-customize-style-css */
 
-/* Important "Header" sections, mapped to their generated identifiers */
-/* Semester of Initiation */
-@section-initiation: section_2;
-/* Not Yet Initiated */
-@section-notinitiated: section_3;
 
-#@{section-initiation} {
+/* Useful mixins for shared field groups */
+/* http://lesscss.org/#mixins */
+/* For "Headers" which are used to define sections, not to show useful info */
+.hidden-header {
 	h2 {
 		display: none;
 	}
+}
 
-	label:last-of-type {
-		display: none;
-	}
-
+/* For "semesters," which are a drop-down (Fall, Spring) plus a year selector */
+.semester-fields {
 	select {
 		width: 200px;
 	}
@@ -22,10 +19,37 @@
 	input {
 		width: 200px;
 	}
-}
 
-#@{section-notinitiated} {
-	h2 {
+	/* Only show the drop-down's label, which is "Semester of ..." */
+	label {
 		display: none;
 	}
+	label:first-of-type {
+		display: block;
+	}
+}
+
+
+/* Important "Header" sections, mapped to their generated identifiers */
+/* Semester of Initiation */
+@section-initiation: section_2;
+/* Not Yet Initiated */
+@section-notinitiated: section_3;
+/* Estimated Semester of Graduation */
+@section-graduation: section_4;
+
+/* Each section in the page, in order */
+#@{section-initiation} {
+	.hidden-header();
+	.semester-fields();
+}
+
+/* The whole point of this is to keep the checkbox on a separate line */
+#@{section-notinitiated} {
+	.hidden-header();
+}
+
+#@{section-graduation} {
+	.hidden-header();
+	.semester-fields();
 }
