@@ -1,14 +1,12 @@
 /* Heavy influence from https://formsmarts.com/weblog/form-builder/online-form-customize-style-css */
 
 /* Important "Header" sections, mapped to their generated identifiers */
-@sections: {
-	/* Semester of Initiation */
-	initiation: section_2;
-	/* Not Yet Initiated */
-	notinitiated: section_3;
-}
+/* Semester of Initiation */
+@section-initiation: section_2;
+/* Not Yet Initiated */
+@section-notinitiated: section_3;
 
-#@{sections}[initiation] {
+#@{section-initiation} {
 	h2 {
 		display: none;
 	}
@@ -26,7 +24,7 @@
 	}
 }
 
-#@{sections}[notinitiated] {
+#@{section-notinitiated} {
 	h2 {
 		display: none;
 	}
