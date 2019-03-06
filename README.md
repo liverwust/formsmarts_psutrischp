@@ -25,7 +25,23 @@ Contents
 * **public_html**: mirror of the directory structure on DreamHost's server
   * **custom.css**: CSS overrides on a per-section basis, primarily to have
                     multiple related elements (semesters, financial aid
-		    entries) on one line
+		    entries) on one line -- generated from custom.less
   * **index.html**: Contains the "embed link" from FormSmarts
   * **syronex.html**: HTML file named by FormSmarts to do domain-name
                       verification, a la SSL/TLS cert "Domain Validation"
+* **custom.less**: Preprocessed CSS overrides using [Less][2] which generates
+                   the **custom.css** file
+* **Makefile**: Run *make* to generate **custom.css** (see Instructions below)
+* **package.json**: [Node.JS][3] config file containing the Less dependency
+* **package-lock.json**: [Node.JS][3] boilerplate config file
+
+[2]: http://lesscss.org/
+[3]: https://nodejs.org/en/
+
+Instructions
+------------
+
+1. [Install Node.JS and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+2. Clone this repository to a local directory using Git
+3. Run "npm install --only=dev"
+4. Run "make" to generate **custom.css** from **custom.less**

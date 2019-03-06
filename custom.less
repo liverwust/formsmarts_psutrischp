@@ -1,0 +1,33 @@
+/* Heavy influence from https://formsmarts.com/weblog/form-builder/online-form-customize-style-css */
+
+/* Important "Header" sections, mapped to their generated identifiers */
+@sections: {
+	/* Semester of Initiation */
+	initiation: section_2;
+	/* Not Yet Initiated */
+	notinitiated: section_3;
+}
+
+#@{sections}[initiation] {
+	h2 {
+		display: none;
+	}
+
+	label:last-of-type {
+		display: none;
+	}
+
+	select {
+		width: 200px;
+	}
+
+	input {
+		width: 200px;
+	}
+}
+
+#@{sections}[notinitiated] {
+	h2 {
+		display: none;
+	}
+}
