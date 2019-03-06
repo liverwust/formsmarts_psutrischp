@@ -1,4 +1,5 @@
 /* Heavy influence from https://formsmarts.com/weblog/form-builder/online-form-customize-style-css */
+/* ASSUMPTION: embed tag specifies 800px width for the entire form */
 
 
 /* Useful mixins for shared field groups */
@@ -29,6 +30,28 @@
 	}
 }
 
+/* Financial aid sources are tabular; put all inputs on one line */
+.financial-aid-source {
+	/* "Column" headers won't work; fields are described in a text block */
+	label {
+		display: none;
+	}
+
+	select {
+		width: 170px;
+	}
+
+	/* Amount "column" is single-width */
+	input:first-of-type {
+		width: 170px;
+	}
+
+	/* Description *column* is double-width */
+	input:last-of-type {
+		width: 340px;
+	}
+}
+
 
 /* Important "Header" sections, mapped to their generated identifiers */
 /* Semester of Initiation */
@@ -37,6 +60,13 @@
 @section-notinitiated: section_3;
 /* Estimated Semester of Graduation */
 @section-graduation: section_4;
+/* Unofficial Transcript */
+@section-transcript: section_5;
+/* Special case: Financial Aid Sources */
+/* First section number (*just* the number) and last section number */
+@section-finaid-first: 7;
+@section-finaid-last: 11;
+
 
 /* Each section in the page, in order */
 #@{section-initiation} {
@@ -53,3 +83,19 @@
 	.hidden-header();
 	.semester-fields();
 }
+
+/* This protects subsequent fields in "General Info" from label:display:none */
+#@{section-transcript} {
+	.hidden-header();
+}
+
+/* Recursive Mixin! (to create a loop) */
+/* http://lesscss.org/features/#mixins-feature-loops-feature */
+.finaid-loop(@counter) when (@counter =< @section-finaid-last) {
+	#section_@{counter} {
+		.hidden-header();
+		.financial-aid-source();
+	}
+	.finaid-loop((@counter + 1));
+}
+.finaid-loop(@section-finaid-first);
