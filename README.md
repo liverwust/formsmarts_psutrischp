@@ -26,6 +26,8 @@ Contents
   * **custom.css**: CSS overrides on a per-section basis, primarily to have
                     multiple related elements (semesters, financial aid
 		    entries) on one line -- generated from custom.less
+  * **disable.html**: Replace *index.html* with this page when the
+                      period for collecting apps has ended.
   * **embed_page.css**: CSS styles for the embed page itself, primarily for
                         coloration and layout -- generated from embed_page.less
   * **index.html**: Contains the "embed link" from FormSmarts
