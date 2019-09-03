@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/liverwust/formsmarts_psutrischp#readme",
   "dependencies": {
-    "browserify": "~1.9",
+    "browserify": "~16.5",
     "browserify-shim": "~3.8",
     "jquery.typewatch": "~3.0",
     "jquery-text-counter": "~0.8.0",
