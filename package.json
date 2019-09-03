@@ -1,6 +1,6 @@
 {
   "name": "formsmarts_psutrischp",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Embedded Site Container for PSU Triangle Scholarship App",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,12 @@
     "url": "https://github.com/liverwust/formsmarts_psutrischp/issues"
   },
   "homepage": "https://github.com/liverwust/formsmarts_psutrischp#readme",
+  "dependencies": {
+    "jquery.typewatch": "~3.0",
+    "jquery-text-counter": "~0.8.0"
+  },
   "devDependencies": {
+    "browserify": "~1.9",
     "less": "~3.9.0"
   }
 }
