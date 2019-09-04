@@ -81,3 +81,6 @@ typings/
 
 # Generated CSS output files
 public_html/*.css
+
+# Generated Browserify bundle
+public_html/bundle.js
