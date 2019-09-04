@@ -37,7 +37,7 @@ Contents
                    the **custom.css** file
 * **embed_page.less**: Preprocessed page layout styles
 * **Makefile**: Run *make* to generate **custom.css** (see Instructions below)
-* **package.json**: [Node.JS][3] config file containing the Less dependency
+* **package.json**: [Node.JS][3] config file containing various dependencies
 * **package-lock.json**: [Node.JS][3] boilerplate config file
 
 [2]: http://lesscss.org/
